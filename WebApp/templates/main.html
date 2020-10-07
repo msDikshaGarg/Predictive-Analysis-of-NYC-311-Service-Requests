@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<div class="header" style="padding-top: 5rem;
+  padding-bottom: calc(5rem - 40px);
+  background-color: #515B65;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  <h1 style="text-align:center; color: white; font-size:50px;font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;">Prediction</h1>
+  <p style="text-align:center; color: white; font-size:30px; font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;">Prediction of resolution time based on Zip Code, Complaint type and Day of the Week.</p>
+</div>
+<head><title>Prediction of Resolution Time</title></head>
+<div style="padding-top: 2rem; padding-bottom: calc(2rem - 20px);">
+<form action="{{ url_for('main') }}" method="POST" align="center">
+  <select id="zipcode" name="zipcode" style="width:100px; height:50px; font-size: 25px; border-radius:36px;
+  display:inline-block;
+  overflow:hidden;
+  background:#cccccc;
+  border:1px solid #cccccc;
+  margin-right: 10px;">
+  <option value="11205">11205</option>
+  <option value="11236">11236</option>
+  <option value="11309">11309</option>
+  <option value="11106">11106</option>
+  <option value="11251">11251</option>
+  <option value="11218">11218</option>
+  <option value="10452">10452</option>
+  <option value="11428">11428</option>
+  <option value="11237">11237</option>
+</select>
+<select id="complaint" name="complaint" style="height:50px; font-size: 25px; border-radius:36px;
+  display:inline-block;
+  overflow:hidden;
+  background:#cccccc;
+  border:1px solid #cccccc; text-align-last:center;
+  margin-right: 10px;">
+  <option value="Noise">Noise</option>
+  <option value="Animal Abuse">Animal Abuse</option>
+  <option value="Traffic">Traffic</option>
+  <option value="Street Conditions">Street Conditions</option>
+  <option value="Parking Conditions">Parking Conditions</option>
+  <option value="Disorderly Behaviour">Disorderly Behaviour</option>
+</select>
+<select id="day" name="day" style="height:50px; font-size: 25px;border-radius:36px;
+  display:inline-block;
+  overflow:hidden;
+  background:#cccccc;margin-right: 10px;
+  border:1px solid #cccccc; text-align-last:center">
+  <option value="1">Monday</option>
+  <option value="2">Tuesday</option>
+  <option value="3">Wednesday</option>
+  <option value="4">Thursday</option>
+  <option value="5">Friday</option>
+  <option value="6">Saturday</option>
+  <option value="7">Sunday</option>
+</select>
+        <input type="submit" style="background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;">
+</form>
+</div>
+<br>
+<div class="result" align="center" style="background-color: #44a6c6;padding-top: 5rem;
+  padding-bottom: calc(5rem - 40px); text-align:center; color: white; font-size:30px; 
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;">
+    {% if result %}
+    	{% for variable, value in original_input.items() %}
+    		<b>{{ variable }}</b> : {{ value }}
+    	{% endfor %}
+		<br>
+    	<br> Prediction of resolution time is:
+   		<p style="font-size:50px">{{ result }}</p>
+    {% endif %}
+</div>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>NYC 311 Complaint Data Visualization</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
+
+    <!-- Slider CSS -->
+    <link rel="stylesheet" href="static/css/slider.css">
+
+
+    <!-- Custom styles for this template -->
+    <link href="static/css/creative.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Top</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#result">Visualization</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#demo">Prediction</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#team">Team Members</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- FRONT PAGE -->
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>Analysis of NYC 311 Service Requests</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#about">About the Project</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="bg-primary" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">About</h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4">
+              We offer our services in making the NYC 311 Service Request data easier to interpret.
+			  We do this by making the analysis of data fun to understand with our interactive analysis depiction. <br><br>
+
+              This data visualization is a dashboard allowing users to check the approximate resolution time to their request. 
+			  This also shows the past analysis of the data with respect to different parameters.
+              To know your approximate resolution time, click the button in the prediction section.
+			  First choose your zip code from the dropdown. 
+              Furthermore, you can choose the type of complaint and day of the week. Hit submit to know your predicted response time.<br><br>
+
+			  Our analysis can also be used to gauge an area before acquiring an apartment at that location and various other such purposes.
+            </p>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#result">Our Findings</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULT -->
+
+    <section class="p-0" id="result">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+		  <p> <br> </p>
+            <h2 class="section-heading text-dark">Analysis</h2>
+            <hr class="light my-4">
+            <p class="text-dark mb-4">
+              Our visualizations have been done in Tableau. All visualizations are in the form of sheets and dashboards.
+			  Click on the button below to view the results of our analysis, or scroll down below to view our predictions. <br>
+            </p>
+            <a class="btn btn-dark btn-xl js-scroll-trigger" href="Visualizations.html">Visualizations</a>
+			<p> <br> </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO -->
+	<section class="bg-primary" id="demo">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+		  <p> <br> </p>
+            <h2 class="section-heading text-white">Predictions</h2>
+            <hr class="light my-4">
+            <p class="text-white mb-4">
+              Our Prediction have been done using ML Algorithms.
+			  Click on the button below to view the results of our predictions for the values you enter. <br>
+            </p>
+            <a class="btn btn-dark btn-xl js-scroll-trigger" href="http://localhost:5000">Predictions</a>
+			<p> <br> </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM INFO -->
+    <section id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Project By</h2>
+            <hr class="my-4">
+            <h3>Diksha Garg</h3>
+            <h3>Kshitija Patel</h3>
+            <h3>Palak Shah</h3>
+            <h3>Shruti Yeravadekar</h3>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- Leaflet JS -->
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+     integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+     crossorigin=""></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="static/vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="static/js/creative.min.js"></script>
+
+    <!-- Bootstrap Slider -->
+    <script src="static/js/bootstrap-slider.js"></script>
+
+    <!-- My jQuery -->
+    <script src="static/js/myjquery.js"></script>
+
+    <!-- map jQuery -->
+    <script src="static/js/mymapjquery.js"></script>
+
+  </body>
+
+</html>
